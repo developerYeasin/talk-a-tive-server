@@ -27,12 +27,13 @@ app.use("/chat", chat);
 app.use("/message", messageRoute);
 
 
-app.use(notFound);
-app.use(errorHandler);
 
 app.get("/", (req, res) => {
   res.send("Hello World!");
 });
+
+app.use(notFound);
+app.use(errorHandler);
 
 const port = process.env.PORT || 5000;
 
