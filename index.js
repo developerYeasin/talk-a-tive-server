@@ -42,7 +42,9 @@ const server = app.listen(port);
 const io = require("socket.io")(server, {
   pingTimeout: 60000,
   cors: {
-    origin: "http://localhost:3000",
+    origin:
+      "https://mern-talk-a-tive.firebaseapp.com" ||
+      "https://mern-talk-a-tive.web.app/",
   },
 });
 
